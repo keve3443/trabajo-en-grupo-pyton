@@ -1,13 +1,11 @@
+def calcular_contagiados(C, D):
+ 
+   total_contagiados = C * (2 ** D)
 
-def calcular_monto_final(P):
+   print(f"El número total de contagiados después de {D} días será: {total_contagiados}")
     
-    tasa_interes = 0.03
-    meses = 2
-    M = P * (1 + tasa_interes) ** meses
-    return M
+C = int(input("Ingrese el número actual de contagiados: "))
+D = int(input("Ingrese el número de días: "))
 
-P = float(input("Ingrese la cantidad prestada (P): "))
-
-monto_final = calcular_monto_final(P)
-print(f"El monto a pagar al final de dos meses es: {monto_final} pesos")
+calcular_contagiados(C, D)
   
