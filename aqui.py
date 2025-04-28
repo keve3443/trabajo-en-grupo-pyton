@@ -27,9 +27,57 @@ def area_lateral_vagon(a, b, r):
     area_rueda = math.pi * r ** 2
     area_total = area_rectangulo + 2 * area_rueda
     return area_total
-a=float(input("ingrese el valor de la a:"))
-b=float(input("ingrese el valor de la b:"))
-r=float(input("ingrese el valor de las r:"))
+a=float(input("ingrese el valor de a:"))
+b=float(input("ingrese el valor de b:"))
+r=float(input("ingrese el valor de r:"))
 
 print("el area lateral del vagon es",area_lateral_vagon(a,b,r))
+
+#ejercicio 4
+
+
+def calcular_carne_aves(N, M, K):
+  
+  peso_gallina = 6
+  peso_gallo = 7
+  peso_pollito = 1
+
+  total_carne = (N * peso_gallina) + (M * peso_gallo) + (K * peso_pollito)
+  return total_carne
+N=float(input("ingrese el valor de N:"))
+M=float(input("ingrese el valor de M:"))
+K=float(input("ingrese el valor de K:"))
+
+
+total_kilos = calcular_carne_aves(N, M, K)
+print(f"La cantidad total de carne de aves es: {total_kilos} kilos")
+
+#ejercicio 5
+
+def calcular_devueltas(P,M,H,B):
+   
+   precio_de_pan=300
+   precio_de_leche=3300
+   precio_de_huevos=350
+
+   costo_total=(P * precio_de_pan) + (M*precio_de_leche) + (H*precio_de_huevos) 
+   
+   diferecia= B -costo_total
+
+   if diferecia >= 0:
+      print(f"te sobran {diferecia}pesos.")
+   else:
+      print(f"te falta {-diferecia}pesos.") 
+
+P=float(input("ingrese la cantidad de panes(p)"))
+M=float(input("ingrese la cantidad de bolsas de leche(M)"))
+H=float(input("ingrese la cantidad de huevos(H)"))
+B=float(input("ingrese el valor del billete(B)"))
+
+calcular_devueltas(P,M,H,B)
+
+
+   
+
+   
 
