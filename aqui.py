@@ -20,11 +20,10 @@ print(f"el volumen del solido es {volumen}")
 #ahora el del cono tenemos que r2=4 y que h=9/2(4.5) y la formula es 1/3*pi*r**2*h=1/3*pi*4**2*(9/2)=24pi
 #entoces volumen total= volumen ezfera+ volumen cono=36pi+24pi=60pi=188.496
 
-import math
 
 def area_lateral_vagon(a, b, r):
     area_rectangulo = a * b
-    area_rueda = math.pi * r ** 2
+    area_rueda = pi * r ** 2
     area_total = area_rectangulo + 2 * area_rueda
     return area_total
 a=float(input("ingrese el valor de a:"))
@@ -32,6 +31,31 @@ b=float(input("ingrese el valor de b:"))
 r=float(input("ingrese el valor de r:"))
 
 print("el area lateral del vagon es",area_lateral_vagon(a,b,r))
+
+def area_rectangulo(base, altura):
+    return base * altura
+
+def area_circulo(radio):
+    return math.pi * (radio ** 2)
+
+def area_lateral_carro(b1, a1, b2, a2, r1, r2):
+    area_rect1 = area_rectangulo(b1, a1)
+    area_rect2 = area_rectangulo(b2, a2)
+    area_rueda1 = area_circulo(r1)
+    area_rueda2 = area_circulo(r2)
+    return area_rect1 + area_rect2 + area_rueda1 + area_rueda2
+
+# Pidiendo datos al usuario
+b1 = float(input("Ingrese la base del rectángulo grande (b1): "))
+a1 = float(input("Ingrese la altura del rectángulo grande (a1): "))
+b2 = float(input("Ingrese la base del rectángulo pequeño (b2): "))
+a2 = float(input("Ingrese la altura del rectángulo pequeño (a2): "))
+r1 = float(input("Ingrese el radio de la primera rueda (r1): "))
+r2 = float(input("Ingrese el radio de la segunda rueda (r2): "))
+
+area_total = area_lateral_carro(b1, a1, b2, a2, r1, r2)
+
+print("El área lateral del carro es:", area_total)
 
 #ejercicio 4
 

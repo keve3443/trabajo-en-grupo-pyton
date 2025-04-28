@@ -1,3 +1,4 @@
+
 def calcular_contagiados(C, D):
  
    total_contagiados = C * (2 ** D)
